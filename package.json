@@ -1,0 +1,46 @@
+{
+  "name": "hotjar-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Hotjar API - User behavior analytics and feedback collection",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "hotjar-mcp-server": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "prebuild": "npm run clean",
+    "start": "node build/index.js",
+    "dev": "npx ts-node --esm src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "hotjar",
+    "model-context-protocol",
+    "ai",
+    "analytics",
+    "surveys"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yasin749/hotjar-mcp-server"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.8.4",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
